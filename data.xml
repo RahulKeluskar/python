@@ -1,0 +1,11 @@
+<data>
+<items1>
+<item name="ray1">alpha</item>
+<item name="ray2">beta</item>
+<item name="ray3">gamma</item>
+</items1>
+<items2>
+<item name="spectral1">multispectral</item>
+<item name="spectral2">hyperspectral</item>
+</items2>
+</data>
