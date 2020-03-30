@@ -1,0 +1,11 @@
+def gcd(num1, num2):
+    '''
+    Effective implementation to find gcd of number
+    '''
+    if num1 == 0:
+        return num2
+
+    return gcd(num1 % num2, num2)
+
+
+print(gcd(120, 270))
