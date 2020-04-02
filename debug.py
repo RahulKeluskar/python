@@ -18,6 +18,14 @@ def test_function_2():
     print(var)
 
 
+def get_file_name():
+    ''' Using file name argument and analyzing flow of the debugger '''
+    filename = __file__
+    import pdb
+    pdb.set_trace()
+    print(f'path = {filename}')
+
+
 if __name__ == '__main__':
     # test_function()
     test_function_2()
