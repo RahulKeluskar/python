@@ -11,4 +11,13 @@ def test_function():
     print(var)
 
 
-test_function()
+def test_function_2():
+    ''' Function to test debugging using breakpoint() function that is inbuilt in python from version 3.7 onwards '''
+    var = int(input('Enter the value : '))
+    breakpoint()
+    print(var)
+
+
+if __name__ == '__main__':
+    # test_function()
+    test_function_2()
