@@ -20,11 +20,11 @@ def input_testing():
         'Enter the row and column an itll be parsed as integers:').split())
     print(f'Row:{row} , Column:{column}')
     # To accept multiple variables but not waste space for one of them
-    row, _, column = map(int, input('Enter 3 space separated inputs'))
+    row, _, column = map(int, input('Enter 3 space separated inputs').split())
     print(f'Row:{row} , Column:{column}')
     # How to inialise a dynamic list without asking for the limit first
     var = list(
-        map(int, input('Enter the values in array separated by space').trim()))
+        map(int, input('Enter the values in array separated by space').trim().split()))
     print(var)
     # How to take one constant and other variable number of inputs in python like the number to be found and then the rest of array
     constant, * \
