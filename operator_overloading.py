@@ -47,6 +47,10 @@ class Superhero():
         ''' Obtain the power level of the superhero '''
         return self.power
 
+    def __repr__(self):
+        ''' Obtaint the representaion of the superhero '''
+        return f'Name:"{self.name}" Power:"{self.power}" \n Moves:"{self.moves}"\n{"*"*15}'
+
     def get_name(self):
         """
         Get the name of the superhero
