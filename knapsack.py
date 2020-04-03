@@ -21,7 +21,6 @@ def optimal_knapsack():
     ''' Accept the inputs for the values and return the maximum loot configuration of the items '''
     l = input('Enter comma separated inputs or all separate values and space separated weights\nExample:\nw1 v1,w2 v2 ....').split(',')
     input_list = [list(map(float, i.split())) for i in l]
-    print(input_list)
 
 
 optimal_knapsack()
