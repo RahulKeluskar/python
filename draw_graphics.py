@@ -73,4 +73,11 @@ def main():
     # hide the turtle we used to draw the picture
     t.ht()
 
-    # This
+    # This causes the program to let the turtle window open until the mouse is clicked
+    screen.exitonclick()
+    print("Program Execution completed")
+
+
+# This code calls the main function to get everything started
+if __name__ == '__main__':
+    main()
