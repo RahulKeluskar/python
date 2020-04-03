@@ -32,9 +32,45 @@ def main():
         # For instance if text contined "goto, 10, 20, 1, black" then
         # commandList will be equal to ['goto', '10', '20', '1', 'black']
         # after splitting the text
-        commanList = text.split(',')
+        commandList = text.split(',')
 
         # get drawing command
         command = commandList[0]
 
         if command == 'goto':
+            # Casting the next parameter to float object from the string
+            # That is extracted from the split function
+            x = float(commandList[1])
+            y = float(commandList[2])
+            width = float(commandList[3])
+            color = commandList[4].strip()
+            t.width(width)
+            t.pencolor(color)
+            t.goto(x, y)
+        elif command == 'circle':
+            radius = float(commandList[1])
+            width = float(commandList[2])
+            color = commandList[3].strip()
+            t.width(width)
+            t.pencolor(color)
+            t.circle(radius)
+        elif command == 'beginFill':
+            color = commandList[1].strip()
+            t.fillcolor(color)
+            t.begin_fill()
+        elif command == "endFill":
+            t.end_fill()
+        elif command == "penup":
+            t.penup()
+        elif command == "pendown":
+            t.pendown()
+        else:
+            print('Unknown command found in file')
+
+    # close the file after finishing operations
+    file.close()
+
+    # hide the turtle we used to draw the picture
+    t.ht()
+
+    # This
