@@ -29,4 +29,17 @@ def main():
     dis.dis(add)
 
 
+def some_decorator(f):
+    def wraps(*args):
+        print(f'Calling function is {f.__name__}')
+        return f(args)
+    return wraps
+
+
+@some_decorator
+def decorated_function(argument):
+    print(f'With argument {argument}')
+
+
 main()
+decorated_function('python')
