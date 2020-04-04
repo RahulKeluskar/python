@@ -41,5 +41,19 @@ def decorated_function(argument):
     print(f'With argument {argument}')
 
 
-main()
-decorated_function('python')
+def trace(f):
+    ''' Function decorator '''
+    def wrap(*args, **kwargs):
+        print(f'[TRACE] func: {f.__name__}, args: {args}, kwargs: {kwargs}')
+        return f(*args, *kwargs)
+    return wrap
+
+
+@trace
+def add_two(x):
+    return x+2
+
+
+add_two(2)
+
+print((trace(lambda x: x**2))(3))
