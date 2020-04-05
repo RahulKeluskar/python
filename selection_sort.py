@@ -28,7 +28,7 @@ def main():
     ''' Accept input for sorting '''
     input_list = list(
         map(float, input('Enter the space separated list').split()))
-    print(f' The sorted lis is {selection_sort(input_list)}')
+    print(f' The sorted list is {selection_sort(input_list)}')
 
 
 main()
