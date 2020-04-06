@@ -22,6 +22,24 @@ def binary_search(sorted_array, low, high, key):
     return mid
 
 
+def binary_search_iterative(sorted_array, key):
+    ''' Iterative implementation of binary search '''
+    low = 0
+    high = len(sorted_array)
+    import math
+    while low <= high:
+        mid = low + math.floor((low+high)/2)
+        if sorted_array[mid] == key:
+            return mid
+        elif sorted_array[mid] > key:
+            high = mid - 1
+        else:
+            low = mid + 1
+
+    # If element is not found return probable location for insertion of search value
+    return low - 1
+
+
 def main():
     ''' Accept input from user and pass parameters to binary search '''
     sorted_list = list(
