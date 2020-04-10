@@ -1,7 +1,0 @@
-'''
-Divide an conquer algorithm for polynomial multiplication
-'''
-
-def poly_mult_karatsuba():
-    ''' Using the karatsuba method for polynomial multiplication '''
-    
